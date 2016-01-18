@@ -11,6 +11,7 @@
     <link rel = "stylesheet" type="text" href = "css/main.css">
   </head>
   <body>
+
   <!--Nav bar code-->
 <div class = "container" id = "main_display">
     <nav class="navbar navbar-default" >
@@ -42,19 +43,21 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">New note</h4>
           </div>
+
           <div class="modal-body">
-            <form role="form">
+            <form method = "post" action = "<?php echo $_SERVER['PHP_SELF'];?>" >
               <div class="form-group">
                 <label for="email">Name:</label>
-                <input type="email" class="form-control" id="Name">
+                <input type="email" class="form-control" name="name">
               </div>
               <div class="form-group">
                 <label for="note">Note:</label>
-                <textarea class="form-control" rows="5" id="note"></textarea>
+                <textarea class="form-control" rows="5" name="note"></textarea>
               </div>
-              <button type="submit" class="btn btn-default">Save</button>
+              <input type="submit" class="btn btn-default" data-dismiss = "modal" value="Submit"/>
             </form>
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
@@ -62,7 +65,6 @@
 
       </div>
   </div>
-
 
   </body>
 </html>

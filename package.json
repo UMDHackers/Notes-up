@@ -1,0 +1,25 @@
+{
+  "name": "note-up",
+  "version": "1.0.0",
+  "description": "twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UMDHackers/Notes-up.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Parth Desai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UMDHackers/Notes-up/issues"
+  },
+  "homepage": "https://github.com/UMDHackers/Notes-up#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
