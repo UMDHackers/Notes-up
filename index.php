@@ -18,7 +18,9 @@
 	</script>
   </head>
   <body>
-
+	<?php
+		$conn = new mysqli(XXX, XXX, XXX, XXX);	
+	?>
 	<!--Nav bar code-->
 	<div class = "container" id = "main_display">
 		<nav class="navbar navbar-default" >
@@ -37,7 +39,23 @@
 		  </div><!--/.container-fluid -->
 		</nav>
 		<div class = "notes">
-
+			<?php
+				$sql = "SELECT title, stuff FROM notes";
+				$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+    					//$result = array_reverse($result, true);
+										
+    					while($row = $result->fetch_assoc()) {
+						$data[] = $row;
+					}
+					$data = array_reverse($data, true);
+        				//foreach($result as $row) {
+					foreach($data as $r) {
+						echo "<h2>". $r["title"] . "</h2>";
+						echo "<p>". $r["stuff"]. "</p>";
+    					}
+				}
+			?>
 		</div>
 	</div>
 
